@@ -20,5 +20,34 @@
     </main>
     {% include footer.html %}
   </div>
+  <script>
+    (function() {
+      function markWorkCardOrientations() {
+        document.querySelectorAll('.work-card img').forEach(function(img) {
+          var card = img.closest('.work-card');
+          if (!card) return;
+          function apply() {
+            if (img.naturalWidth && img.naturalHeight) {
+              if (img.naturalWidth > img.naturalHeight * 1.05) {
+                card.classList.add('is-landscape');
+              } else {
+                card.classList.remove('is-landscape');
+              }
+            }
+          }
+          if (img.complete) {
+            apply();
+          } else {
+            img.addEventListener('load', apply);
+          }
+        });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', markWorkCardOrientations);
+      } else {
+        markWorkCardOrientations();
+      }
+    })();
+  </script>
 </body>
 </html>
