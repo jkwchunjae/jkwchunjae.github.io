@@ -1,18 +1,20 @@
-.gallery { display: grid; gap: 30vh 0; grid-template-columns: 1fr; }
+.gallery { display: grid; gap: clamp(3rem, 8vh, 6rem) 0; grid-template-columns: 1fr; }
 
-.work-card { margin: 0; min-width: 0; }
-.work-card a { background: var(--soft); display: block; }
-.work-card img { display: block; height: auto; max-height: min(80vw, 850px); object-fit: contain; width: 100%; }
-.work-card figcaption { display: grid; gap: .22rem; padding-top: .75rem; }
+.work-card { margin: 0 auto; min-width: 0; width: fit-content; max-width: min(100%, 1000px); }
+.work-card a { background: transparent; display: block; max-width: 100%; text-decoration: none; overflow: hidden; }
+.work-card img { display: block; height: auto; width: auto; max-width: 100%; max-height: min(68vh, 700px); object-fit: contain; margin: 0 auto; transition: opacity 0.2s ease, transform 0.3s ease; }
+.work-card a:hover img { opacity: 0.94; transform: scale(1.005); }
+.work-card figcaption { display: grid; gap: .22rem; padding-top: .75rem; max-width: 100%; }
 .work-card figcaption strong { font-size: .82rem; font-weight: 500; line-height: 1.25; }
 .work-card figcaption span { color: var(--quiet); font-size: .72rem; line-height: 1.4; }
 
 .archive-heading { align-items: end; display: flex; justify-content: space-between; padding: clamp(4.5rem, 11vw, 9rem) 0 clamp(2.5rem, 5vw, 4rem); }
 .archive-heading h1 { font-size: clamp(3.2rem, 8vw, 8rem); }
 .archive-heading > p { color: var(--quiet); font-size: .75rem; margin: 0 0 .45rem; }
-.archive-gallery { padding: clamp(3rem, 6vw, 6rem) 0 clamp(5rem, 10vw, 9rem); }
+.archive-gallery { padding: clamp(2rem, 4vw, 4rem) 0 clamp(4rem, 8vw, 7rem); }
 
 @media (max-width: 740px) {
   .archive-heading { align-items: start; flex-direction: column; gap: 1.5rem; }
   .archive-heading > p { margin: 0; }
+  .work-card img { max-height: min(65vh, 550px); }
 }
