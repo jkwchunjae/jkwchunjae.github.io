@@ -1,0 +1,18 @@
+.gallery { display: grid; gap: 30vh 0; grid-template-columns: 1fr; }
+
+.work-card { margin: 0; min-width: 0; }
+.work-card a { background: var(--soft); display: block; }
+.work-card img { display: block; height: auto; max-height: min(80vw, 850px); object-fit: contain; width: 100%; }
+.work-card figcaption { display: grid; gap: .22rem; padding-top: .75rem; }
+.work-card figcaption strong { font-size: .82rem; font-weight: 500; line-height: 1.25; }
+.work-card figcaption span { color: var(--quiet); font-size: .72rem; line-height: 1.4; }
+
+.archive-heading { align-items: end; display: flex; justify-content: space-between; padding: clamp(4.5rem, 11vw, 9rem) 0 clamp(2.5rem, 5vw, 4rem); }
+.archive-heading h1 { font-size: clamp(3.2rem, 8vw, 8rem); }
+.archive-heading > p { color: var(--quiet); font-size: .75rem; margin: 0 0 .45rem; }
+.archive-gallery { padding: clamp(3rem, 6vw, 6rem) 0 clamp(5rem, 10vw, 9rem); }
+
+@media (max-width: 740px) {
+  .archive-heading { align-items: start; flex-direction: column; gap: 1.5rem; }
+  .archive-heading > p { margin: 0; }
+}

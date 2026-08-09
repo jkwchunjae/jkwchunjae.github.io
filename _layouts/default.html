@@ -6,6 +6,11 @@
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}The artist portfolio of Lee, Hyunbae.{% endif %}">
   <title>{% if page.title %}{{ page.title }} — Lee, Hyunbae{% else %}Lee, Hyunbae{% endif %}</title>
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+  {% if page.stylesheets %}
+    {% for stylesheet in page.stylesheets %}
+  <link rel="stylesheet" href="{{ stylesheet | relative_url }}">
+    {% endfor %}
+  {% endif %}
 </head>
 <body>
   <div class="site-shell">
