@@ -11,12 +11,8 @@
 .cv-entry:first-child { border-top: 0; padding-top: 0; }
 .cv-entry time { color: var(--quiet); font-size: .75rem; line-height: 1.55; }
 .cv-entry p { font-size: .88rem; line-height: 1.6; margin: 0; }
-.about-record__source { align-items: center; display: flex; gap: 2rem; justify-content: space-between; padding-top: 1.2rem; }
-.about-record__source p { color: var(--quiet); font-size: .75rem; margin: 0; }
-
 @media (max-width: 600px) {
   .about-category { display: block; }
   .about-category > header { margin-bottom: 1.8rem; padding-right: 0; }
   .cv-entry { grid-template-columns: minmax(5.5rem, .35fr) minmax(0, 1.65fr); }
-  .about-record__source { align-items: start; flex-direction: column; gap: .7rem; }
 }
