@@ -38,11 +38,10 @@
 .note-document-quote p { margin: 0; }
 .note-document-list { display: grid; gap: .9rem; margin: 0; padding-left: 1.2rem; }
 .note-document-list li { font-size: .94rem; line-height: 1.8; }
-.note-period-nav { margin: 0 0 clamp(3rem, 6vw, 5rem); }
-.note-document-title { border-top: 1px solid var(--line); display: grid; font-size: clamp(1.5rem, 2.5vw, 2.2rem); gap: .45rem; letter-spacing: -.03em; line-height: 1.25; margin: clamp(4rem, 8vw, 7rem) 0 clamp(1.2rem, 2.5vw, 2rem); padding-top: 1rem; scroll-margin-top: 7rem; }
+.note-period-nav { margin: 0; }
+.note-archive { padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(5rem, 10vw, 9rem); }
+.note-document-title { display: grid; font-size: clamp(1.5rem, 2.5vw, 2.2rem); gap: .45rem; letter-spacing: -.03em; line-height: 1.25; margin: 0 0 clamp(1.2rem, 2.5vw, 2rem); scroll-margin-top: 10rem; }
 .note-document-title:first-child { margin-top: 0; }
-.note-document-title span { color: var(--quiet); font-size: .7rem; font-weight: 600; letter-spacing: .13em; line-height: 1; text-transform: uppercase; }
-
 @media (max-width: 600px) {
-  .note-document-title { scroll-margin-top: 9rem; }
+  .note-document-title { scroll-margin-top: 11rem; }
 }

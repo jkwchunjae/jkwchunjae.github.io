@@ -1,5 +1,6 @@
 .about-record { padding: clamp(3rem, 7vw, 6rem) 0 clamp(5rem, 10vw, 9rem); }
 .about-record__heading { border-bottom: 1px solid var(--line); padding-bottom: clamp(2rem, 4vw, 4rem); }
+.about-record__heading .eyebrow { color: var(--ink); font-size: clamp(1.75rem, 3vw, 2.6rem); font-weight: 700; letter-spacing: -.045em; line-height: 1; text-transform: none; }
 
 .about-category { border-bottom: 1px solid var(--line); display: grid; grid-template-columns: minmax(180px, .48fr) minmax(0, 1.52fr); padding: clamp(2.4rem, 5vw, 5rem) 0; }
 .about-category > header { padding-right: 2rem; }
