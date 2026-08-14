@@ -7,19 +7,9 @@ stylesheets:
 ---
 
 <!-- ABOUT-ARCHIVE:START -->
-<section class="about-record lang-all" aria-labelledby="about-record-title">
+<section class="about-record">
   <header class="about-record__heading">
-    <div class="about-record__title-group">
-      <div>
-        <p class="eyebrow">Lee, Hyunbae · 1979–</p>
-        <h1 id="about-record-title">Curriculum vitae</h1>
-      </div>
-      <div class="lang-switch" role="tablist" aria-label="Language options">
-        <button type="button" class="lang-btn active" data-lang="all" role="tab" aria-selected="true">전체 (ALL)</button>
-        <button type="button" class="lang-btn" data-lang="ko" role="tab" aria-selected="false">국문 (KO)</button>
-        <button type="button" class="lang-btn" data-lang="en" role="tab" aria-selected="false">영문 (EN)</button>
-      </div>
-    </div>
+    <p class="eyebrow">Lee, Hyunbae · 1979–</p>
   </header>
   <div class="about-record__sections">
     <section class="about-category" aria-labelledby="about-0-title">
@@ -627,41 +617,4 @@ stylesheets:
   </div>
 </section>
 
-<script>
-  (function() {
-    var langSwitch = document.querySelector('.lang-switch');
-    var aboutRecord = document.querySelector('.about-record');
-    if (!langSwitch || !aboutRecord) return;
-
-    var buttons = langSwitch.querySelectorAll('.lang-btn');
-    
-    function setLanguage(lang) {
-      aboutRecord.classList.remove('lang-all', 'lang-ko', 'lang-en');
-      aboutRecord.classList.add('lang-' + lang);
-      
-      buttons.forEach(function(btn) {
-        var active = btn.getAttribute('data-lang') === lang;
-        btn.classList.toggle('active', active);
-        btn.setAttribute('aria-selected', active ? 'true' : 'false');
-      });
-      
-      try {
-        localStorage.setItem('about_lang', lang);
-      } catch(e) {}
-    }
-
-    langSwitch.addEventListener('click', function(e) {
-      var btn = e.target.closest('.lang-btn');
-      if (!btn) return;
-      var lang = btn.getAttribute('data-lang');
-      if (lang) setLanguage(lang);
-    });
-
-    var savedLang = 'all';
-    try {
-      savedLang = localStorage.getItem('about_lang') || 'all';
-    } catch(e) {}
-    setLanguage(savedLang);
-  })();
-</script>
 <!-- ABOUT-ARCHIVE:END -->
