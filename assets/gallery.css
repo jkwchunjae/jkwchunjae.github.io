@@ -8,15 +8,10 @@
 .work-card figcaption strong { color: var(--quiet); font-size: .82rem; font-weight: 500; line-height: 1.25; }
 .work-card figcaption span { color: var(--quiet); font-size: .72rem; line-height: 1.4; }
 
-.archive-heading { align-items: end; display: flex; justify-content: space-between; padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(1.5rem, 3vw, 2.5rem); }
-.archive-heading h1 { font-size: clamp(1.8rem, 4vw, 3.2rem); }
-.archive-heading > p { color: var(--quiet); font-size: .75rem; margin: 0 0 .45rem; }
 .archive-gallery { padding: clamp(2rem, 4vw, 4rem) 0 clamp(4rem, 8vw, 7rem); }
 
 @media (max-width: 740px) {
   .gallery { gap: clamp(9rem, 24vh, 16rem) 0; }
-  .archive-heading { align-items: start; flex-direction: column; gap: 1.5rem; }
-  .archive-heading > p { margin: 0; }
   .work-card { width: 100%; padding: clamp(3.5rem, 9vh, 6.5rem) 0; }
   .work-card img { max-height: min(56vh, 460px); }
   .work-card.is-landscape { padding-top: clamp(6rem, 16vh, 11rem); padding-bottom: clamp(6rem, 16vh, 11rem); }
