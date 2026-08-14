@@ -24,17 +24,20 @@ a { color: inherit; }
 
 .site-shell { margin: 0 auto; max-width: 1680px; padding: 0 clamp(1.25rem, 4vw, 4.5rem); }
 
+.site-masthead {
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--canvas) 94%, transparent);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 .site-header {
   align-items: center;
   border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   min-height: 84px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: color-mix(in srgb, var(--canvas) 94%, transparent);
-  backdrop-filter: blur(12px);
 }
 
 .wordmark {
@@ -98,6 +101,8 @@ h2 { font-size: clamp(2rem, 3vw, 3.4rem); font-weight: 400; letter-spacing: -.05
   padding: 1rem 0;
   scrollbar-width: thin;
 }
+
+.site-masthead > .period-nav { border-top: 0; }
 
 .period-nav a { color: var(--quiet); flex: 0 0 auto; font-size: .76rem; text-decoration: none; }
 .period-nav a:hover, .period-nav a[aria-current="page"] { color: var(--ink); }

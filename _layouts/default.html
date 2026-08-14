@@ -14,7 +14,14 @@
 </head>
 <body>
   <div class="site-shell">
-    {% include header.html %}
+    <div class="site-masthead">
+      {% include header.html %}
+      {% if page.url contains '/works/' %}
+        {% include period_nav.html %}
+      {% elsif page.exhibition_year %}
+        {% include exhibition_period_nav.html %}
+      {% endif %}
+    </div>
     <main>
       {{ content }}
     </main>
